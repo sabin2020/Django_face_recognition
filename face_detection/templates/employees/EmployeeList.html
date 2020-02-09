@@ -1,0 +1,126 @@
+<table>
+    <tr>
+        <th>
+            image
+        </th>
+        <th>
+            id
+        </th>
+        <th>
+            name
+        </th>
+        <th>
+            phone
+        </th>
+        <th>
+            email
+        </th>
+        <th>
+            address
+        </th>
+        <th>
+            work_hour
+        </th>
+        <th>
+            in_time
+        </th>
+        <th>
+            out_time
+        </th>
+        <th>
+            time_outside_office
+        </th>
+        <th>
+            how_many_time
+        </th>
+        <th>
+            in_out
+        </th>
+    </tr>
+    {% for employee in employees %}
+    {% if employee.in_out == False %}
+    <tr>
+    <tr bgcolor="red">
+
+    <td class="imgs"><img src="/media//{{employee.photo}}" width="100px" height="100px"/></td>
+       
+        <td>
+              <a href="{% url 'employeeProfile' employee.id %}"> <h1>{{employee.id}}</h1></a>
+        </td>
+        <td>
+            {{employee.name}}
+        </td>
+        <td>
+            {{employee.phone}}
+        </td>
+        <td>
+            {{employee.email}}
+        </td>
+        <td>
+            {{employee.address}}
+        </td>
+        <td>
+            {{employee.work_hour}}
+        </td>
+        <td>
+            {{employee.in_time}}
+        </td>
+        <td>
+            {{employee.out_time}}
+        </td>
+        <td>
+            {{employee.time_outside_office}}
+        </td>
+        <td>
+            {{employee.how_many_times}}
+        </td>
+        <td>
+            {{employee.in_out}}
+        </td>
+
+    </tr>       
+    {% endif %}
+    {% if employee.in_out == True %}
+    <tr bgcolor="Green">
+    <td class="imgs"><img src="/media//{{employee.photo}}" width="100px" height="100px"/></td>
+        
+        <td>
+            <a href="{% url 'employeeProfile' employee.id %}"> <h1>{{employee.id}}</h1></a>
+
+        </td>
+        <td>
+            {{employee.name}}
+        </td>
+        <td>
+            {{employee.phone}}
+        </td>
+        <td>
+            {{employee.email}}
+        </td>
+        <td>
+            {{employee.address}}
+        </td>
+        <td>
+            {{employee.work_hour}}
+        </td>
+        <td>
+            {{employee.in_time}}
+        </td>
+        <td>
+            {{employee.out_time}}
+        </td>
+        <td>
+            {{employee.time_outside_office}}
+        </td>
+        <td>
+            {{employee.how_many_times}}
+        </td>
+        <td>
+            {{employee.in_out}}
+        </td>
+
+    </tr>       
+    {% endif %}
+{% endfor %}
+</table> 
+
