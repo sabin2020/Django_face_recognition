@@ -3,9 +3,13 @@ from . import views
 from django.conf.urls import url, include
 from django.contrib import admin
 
+app_name = 'accounts'
+
 urlpatterns = [
-    # path('detect',views.detect,name='detect'),
+    url(r'photo', views.photo),
+    url(r'train', views.train),
     path('manage',views.index,name='index'),
-     url(r'detect', views.detect),
+    url(r'detect', views.detect),
+    path('employee/search',views.search,name="employeeSearch"),
     
 ]

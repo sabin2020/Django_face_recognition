@@ -1,5 +1,49 @@
-
-<h1>Name:{{employee.name}}</h1>
-<h1>email:{{employee.email}}</h1>
-<h1>phone:{{employee.phone}}</h1>
-<h1><img src="/media//{{employee.photo}}"/></h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+body
+{
+	font-family: sans-serif;
+	color: #3c39393;
+	background-color:#f1f1f1;
+}
+.user_interface
+{
+	width: 400px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
+}
+.user_image
+{
+	position: relative;
+}
+.user_main
+{
+	padding: 20px;
+}
+.info
+{
+	color: #4b4fe2;
+	margin-right: 16px;
+}
+    </style>
+</head>
+<body>
+	<div class="user_interface">
+	<div class="user_image">
+<h1><img src="/media//{{employee.photo}}"/ style="height: 50%; width: 100%;"></h1> 
+	</div>
+		<div class="user_main">
+		<h1>Name:{{employee.name}}</h1>
+		<i class="fa fa-envelope info"><h4>email:{{employee.email}}</h4>></i><br/>	
+		<i class="fa fa-phone info"><h4>phone:{{employee.phone}}</h4></i>
+		<hr>
+		</div>
+	</div>
+</body>
+</html>
